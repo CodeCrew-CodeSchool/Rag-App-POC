@@ -27,4 +27,4 @@ FRONTEND_START="npm run dev"
 
 cd ./backend && nohup $BACKEND_START  & cd .. &
 
-cd ./frontend && nohup $FRONTEND_START && wait && open http://localhost:5173/ &
+cd ./frontend && nohup $FRONTEND_START && wait &
