@@ -51,7 +51,7 @@ console.log(greetings);
 //Express Routes
 app.get("/", async (req, res) => {
     res.send(greetings);
-  });
+});
 
 app.post('/ask', async (req, res) => {
 
