@@ -33,7 +33,7 @@ chmod +x start.sh && ./start.sh
 
 In order for this script to run you will need:
 - Node installed on your machine
-- ollama 3.2 installed and running on your machine per instructions [here](https://github.com/CodeCrew-CodeSchool/RAG-Skeleton-App)
+- ollama 3.2 installed and running on your machine per instructions above
 
 ## Stop the Apps:
 In the terminal, run:
