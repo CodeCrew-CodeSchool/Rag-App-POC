@@ -37,4 +37,5 @@ VOLUME /root/.ollama
 ENTRYPOINT ["/bin/sh", "-c", "echo 'Starting apps...' && \
     ollama run llama3.2 & \
     cd /app/backend && npm start & \
-    cd /app/frontend && npm run dev & "]
+    cd /app/frontend && npm run dev & \
+    wait && echo 'All apps have started successfully!'"]
