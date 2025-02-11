@@ -18,10 +18,11 @@ cd ../frontend
 npm i -y --verbose
 
 # Return to main directory
-cd ..
+cd ../
 
 
 # Start Ollama and both apps
+echo "starting apps"
 
 OLLAMA_START="ollama run llama3.2"
 BACKEND_START="npm run start"
@@ -32,3 +33,5 @@ nohup $OLLAMA_START &
 cd ./backend && nohup $BACKEND_START  & cd .. &
 
 cd ./frontend && nohup $FRONTEND_START && wait &
+
+echo "apps started"
