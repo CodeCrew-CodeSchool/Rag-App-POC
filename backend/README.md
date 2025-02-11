@@ -13,9 +13,17 @@ I sourced the Netflix data from [Kaggle](https://www.kaggle.com/datasets/harshit
 # Setup
 Run the following in the terminal:
 
-```cd backend```
-```npm i -y```
-```touch .env```
+```bash
+cd backend
+```
+
+```bash
+npm i -y
+```
+
+```bash
+touch .env
+```
 
 The .env file will need to contain the following variables.
 Put your mongodb username and password after the '='.
@@ -30,7 +38,9 @@ The connection string here is local host, but you may also connect to an atlas c
 # Start the app
 
 Start the backend app by running:
-```npm run start```
+```bash
+npm run start
+```
 
 The app will start on localhost port 3000 by default.
 

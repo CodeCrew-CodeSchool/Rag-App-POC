@@ -10,12 +10,21 @@ Currently, two official plugins are available:
 
 # Setup
 
-```cd frontend```
-```npm i -y```
+```bash
+cd frontend
+```
+
+```bash
+npm i -y
+```
 
 Start the app on default port 5173 using:
 
-```npm run dev```
+```bash
+npm run dev
+```
 
 Or manually set a port to run the app using:
-```npm run dev -- --port=3001```
+```bash
+npm run dev -- --port=3001
+```
