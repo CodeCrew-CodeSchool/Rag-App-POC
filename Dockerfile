@@ -37,4 +37,4 @@ VOLUME /root/.ollama
 
 RUN chmod +x start.sh
 
-CMD ["./start.sh"]
+CMD ["/bin/sh", "/app/start.sh"]
