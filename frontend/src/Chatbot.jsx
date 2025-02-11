@@ -17,7 +17,9 @@ const Chatbot = () => {
 
     const requestBody = {
       query,
-      sources: [{ type: "database", link: "" }],
+      //Swap the following line if you want the RAG app to default to a mongodb database for document sources
+      sources: [{ type: "csv", link: "" }],
+      // sources: [{ type: "database", link: "" }],
     };
 
     try {
