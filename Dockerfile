@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 #!/bin/sh
-FROM kraussian/ollama-llama3.2:latest
+FROM ollama/ollama
 RUN apt-get -y update
 
 # Install git, curl, yarn

@@ -23,7 +23,7 @@ cd ..
 
 # Start Ollama and both apps
 
-OLLAMA_START="run ollama3.2"
+OLLAMA_START="ollama run llama3.2"
 BACKEND_START="npm run start"
 FRONTEND_START="npm run dev"
 
