@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 #!/bin/sh
-FROM ubuntu:latest
+FROM ollama/ollama
 RUN apt-get -y update
 
 # Install git, curl, yarn
@@ -35,6 +35,8 @@ COPY . /app
 RUN cd /app
 
 EXPOSE 3000 5173 11434
+
+VOLUME /root/.ollama
 
 RUN chmod +x start.sh
 
