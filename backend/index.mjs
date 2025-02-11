@@ -23,7 +23,6 @@ dotenv.config();
 const dbuser = process.env.dbUsername; //database username
 const dbpwd = process.env.dbPwd; //database password
 const dbconn = process.env.dbConnection || ""; //database connection string
-const watchData = process.env.watchDataPath
 
 //Uncomment the following line to help debug any .env issues
 // console.log(`debug\n${dbuser}\n${dbpwd}\n${dbconn}`);
@@ -107,7 +106,7 @@ app.post('/ask', async (req, res) => {
             // Add your data array to your RAG app using JsonLoader
             await ragApplication.addLoader(new JsonLoader({object: results}));
 
-            console.log('resource loaded: ');
+            console.log(`${source.type} resource loaded`);
             //console.log(results);
         }
     });
@@ -119,5 +118,5 @@ app.post('/ask', async (req, res) => {
 })
 //start the application
   app.listen(port, () => {
-    console.log(`Listening @ http://localhost:3000 ...`);
+    console.log(`Listening @ http://localhost:${port} ...`);
   });
