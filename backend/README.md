@@ -8,7 +8,7 @@ I made the following changes:
 - Commented the mongodb connection
 - Added CORS middleware to express app.
 
-I sourced the Netflix data from [Kaggle](https://www.kaggle.com/datasets/anandshaw2001/netflix-movies-and-tv-shows).
+I sourced the Netflix data from [Kaggle](https://www.kaggle.com/datasets/harshitshankhdhar/imdb-dataset-of-top-1000-movies-and-tv-shows).
 
 # Setup
 Run the following in the terminal:

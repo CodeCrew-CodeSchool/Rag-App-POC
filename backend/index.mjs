@@ -83,7 +83,7 @@ app.post('/ask', async (req, res) => {
             await ragApplication.addLoader(new CsvLoader({
 
                 // Ternary operator will check if a csv path/link is provided. If not, it will default to the netflix.csv in repo
-                filePathOrUrl: source.link ? source.link : "./netflix.csv"
+                filePathOrUrl: source.link ? source.link : "./imdb_top_1000.csv"
             }))
 
         } else if (source.type == 'database') {
@@ -95,10 +95,10 @@ app.post('/ask', async (req, res) => {
             console.log('Connected successfully to database server');
 
             //specify database
-            const db = client.db('Netflix'); 
+            const db = client.db('IMDB1000'); 
 
             //specify collection
-            const collection = db.collection('netflix'); 
+            const collection = db.collection('imdb1000'); 
 
             //Select all data in the collection, store in memory as an array
             const results = await collection.find().toArray(); //aggregate([{$sort: { CREATION_DATE: -1 }}]).limit(20).toArray();
