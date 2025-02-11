@@ -8,15 +8,14 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
+# Setup
 
-setup:
-cd frontend
-npm i -y
+```cd frontend```
+```npm i -y```
 
-Start the app  on default port 5173 using:
-npm run dev
+Start the app on default port 5173 using:
 
-or manually set a port to run the app using:
-npm run dev -- --port=3001
+```npm run dev```
 
-TODO: Update this readme with full app setup
+Or manually set a port to run the app using:
+```npm run dev -- --port=3001```

@@ -1,25 +1,38 @@
-Follow the RAG app setup based on skeleton created in this repo:
-https://github.com/CodeCrew-CodeSchool/RAG-Skeleton-App
+# Backend
 
-Modified the mongodb connection code
-Added CORS to the express app to enable requests from the front-end app.
+The backend app setup is the same as the RAG app based on skeleton created in [this repo](https://github.com/CodeCrew-CodeSchool/RAG-Skeleton-App).
 
-Added Data Source: https://www.kaggle.com/datasets/anandshaw2001/netflix-movies-and-tv-shows
+I made the following changes:
 
+- Modified csv loading step to default to static csv file in project directory if no document is provided.
+- Commented the mongodb connection
+- Added CORS middleware to express app.
 
-env file will need the following variables:
-dbUsername
-dbPwd
-dbConnection
+I sourced the Netflix data from [Kaggle](https://www.kaggle.com/datasets/anandshaw2001/netflix-movies-and-tv-shows).
 
-setup:
-cd backend
-npm i -y
+# Setup
+Run the following in the terminal:
 
-start the backend app using:
-npm run start
+```cd backend```
+```npm i -y```
+```touch .env```
 
-it will start on part 3000 by default
+The .env file will need to contain the following variables.
+Put your mongodb username and password after the '='.
+
+```
+    dbUsername=
+    dbPwd=
+    dbConnection=mongodb://localhost:27017/
+```
+The connection string here is local host, but you may also connect to an atlas cloud db.
+
+# Start the app
+
+Start the backend app by running:
+```npm run start```
+
+The app will start on localhost port 3000 by default.
 
 TODO: 
 - update this read me with full app set up
