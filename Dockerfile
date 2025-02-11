@@ -48,8 +48,6 @@ RUN cd /frontend
 
 RUN npm i -y --verbose
 
-RUN cd /app
-
 EXPOSE 3000 5173 11434
 
 VOLUME /root/.ollama
@@ -57,5 +55,5 @@ VOLUME /root/.ollama
 # Override ENTRYPOINT to start all processes
 ENTRYPOINT ["/bin/sh", "-c", "echo 'Starting apps...' && \
     nohup ollama run llama3.2 & \
-    cd /backend && nohup npm run start & cd /app && \
-    cd /frontend && nohup npm run dev & wait"]
+    cd /app/backend && nohup npm run start & cd /app && \
+    cd /app/frontend && nohup npm run dev & wait"]
