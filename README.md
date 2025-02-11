@@ -15,7 +15,7 @@ ollama pull llama3.2
 ```
 
 ```bash
-ollama run
+ollama run llama3.2
 ```
 
 Please view the frontend and backend README files linked below:
