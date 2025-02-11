@@ -2,7 +2,7 @@
 
 # Backend - Install Dependencies
 cd backend
-npm i -y
+npm i -y --verbose
 
 # Create env file
 touch .env
@@ -15,7 +15,7 @@ touch .env
 
 # Install frontend dependencies
 cd ../frontend
-npm i -y
+npm i -y --verbose
 
 # Return to main directory
 cd ..
