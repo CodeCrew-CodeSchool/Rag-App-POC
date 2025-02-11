@@ -31,10 +31,31 @@ COPY . /app
 
 RUN cd /app
 
-RUN chmod +x start.sh
+# RUN chmod +x start.sh
+
+RUN cd /backend
+
+RUN npm i -y --verbose
+
+RUN touch .env && \
+    echo "dbUsername=''" >> .env && \
+    echo "dbPwd=''" >> .env && \
+    echo "dbConnection=mongodb://localhost:27017/" >> .env
+
+RUN cd /app
+
+RUN cd /frontend
+
+RUN npm i -y --verbose
+
+RUN cd /app
 
 EXPOSE 3000 5173 11434
 
 VOLUME /root/.ollama
 
-ENTRYPOINT ["/bin/sh", "/app/start.sh"]
+# Override ENTRYPOINT to start all processes
+ENTRYPOINT ["/bin/sh", "-c", "echo 'Starting apps...' && \
+    nohup ollama run llama3.2 & \
+    cd /backend && nohup npm run start & cd /app && \
+    cd /frontend && nohup npm run dev & wait"]
