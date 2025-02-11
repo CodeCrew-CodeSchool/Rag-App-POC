@@ -29,11 +29,9 @@ WORKDIR /app
 
 COPY . /app
 
-RUN cd /app
-
 # RUN chmod +x start.sh
 
-RUN cd /backend
+RUN cd /app/backend
 
 RUN npm i -y --verbose
 
@@ -42,9 +40,7 @@ RUN touch .env && \
     echo "dbPwd=''" >> .env && \
     echo "dbConnection=mongodb://localhost:27017/" >> .env
 
-RUN cd /app
-
-RUN cd /frontend
+RUN cd /app/frontend
 
 RUN npm i -y --verbose
 
