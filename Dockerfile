@@ -29,18 +29,20 @@ RUN touch .env && \
 
 RUN cd /app/frontend && npm install -y --verbose
 
-RUN ollama pull llama3.2
-
 EXPOSE 3000 5173 11434
 
 VOLUME /root/.ollama
 
 # Override ENTRYPOINT to start all processes
-ENTRYPOINT ["/bin/sh", "-c", "echo 'Starting apps...' && \
+ENTRYPOINT ["/bin/sh", "-c", "echo 'Starting Ollama server...' && \
     ollama serve & \
-    sleep 2 && \
+    sleep 5 && \
+    echo 'Downloading model llama3.2...' && \
+    ollama pull llama3.2 && \
     echo 'Preloading llama3.2 model...' && \
     ollama run llama3.2 -m && \
+    echo 'Starting backend...' && \
     cd /app/backend && npm start & \
+    echo 'Starting frontend...' && \
     cd /app/frontend && npm run dev & \
     wait && echo 'All apps have started successfully!'"]
