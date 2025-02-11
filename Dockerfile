@@ -31,10 +31,10 @@ COPY . /app
 
 RUN cd /app
 
+RUN chmod +x start.sh
+
 EXPOSE 3000 5173 11434
 
 VOLUME /root/.ollama
-
-RUN chmod +x start.sh
 
 ENTRYPOINT ["/bin/sh", "/app/start.sh"]
