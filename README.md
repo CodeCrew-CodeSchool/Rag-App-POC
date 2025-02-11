@@ -20,9 +20,9 @@ ollama run llama3.2
 
 Please view the frontend and backend README files linked below:
 
-- [frontend](https://github.com/CodeCrew-CodeSchool/Rag-App-POC/blob/6a9d69c1c4fd2c40bbbbd1b748a8bbc240fdc3b0/README.md)
+- [frontend](https://github.com/CodeCrew-CodeSchool/Rag-App-POC/blob/main/frontend/README.md)
 
-- [backend](https://github.com/CodeCrew-CodeSchool/Rag-App-POC/blob/6a9d69c1c4fd2c40bbbbd1b748a8bbc240fdc3b0/backend/README.md)
+- [backend](https://github.com/CodeCrew-CodeSchool/Rag-App-POC/blob/main/backend/README.md)
 
 ## Startup Shortcut
 To start the app using the start.sh script, clone the repo, cd into RAG-APP-POC directory, and run the following commands in the terminal:
