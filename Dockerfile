@@ -8,9 +8,6 @@ RUN apt-get -y install git
 RUN apt-get -y install curl
 RUN apt-get -y install yarn
 
-# Install Ollama
-RUN curl -fsSL https://ollama.com/install.sh | sh
-
 # Install Node Version Manager and Node
 
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
