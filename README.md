@@ -11,8 +11,7 @@ Please view the frontend and backend README files linked below:
 ## Startup Shortcut
 To start the app using the start.sh script, clone the repo, cd into RAG-APP-POC directory, and run the following commands in the terminal:
 
-```chmod +x start.sh```
-```./start.sh```
+```chmod +x start.sh && ./start.sh```
 
 In order for this script to run you will need:
 - Node installed on your machine
